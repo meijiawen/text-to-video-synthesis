@@ -14,7 +14,7 @@ license: Apache License 2.0
 deployspec:
   cpu: 4
   memory: 32000
-  entry_file: gradio_demo.py
+  entry_file: app.py
   gpu: 1
   gpu_memory: 32
   instance: 1
