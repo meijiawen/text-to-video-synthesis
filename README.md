@@ -19,7 +19,6 @@ deployspec:
   gpu_memory: 32
   instance: 1
   instance_type: ecs.gn6e-c12g1.3xlarge
-license: Apache License 2.0
 ---
 #### Clone with HTTP
 ```bash
