@@ -10,7 +10,7 @@ import subprocess
 
 import gradio as gr
 import torch
-from huggingface_hub import snapshot_download
+# from huggingface_hub import snapshot_download
 
 if os.getenv('SYSTEM') == 'spaces':
     subprocess.run(shlex.split('pip uninstall -y modelscope'))
@@ -22,12 +22,12 @@ if os.getenv('SYSTEM') == 'spaces':
 from modelscope.outputs import OutputKeys
 from modelscope.pipelines import pipeline
 
-model_dir = pathlib.Path('weights')
-if not model_dir.exists():
-    model_dir.mkdir()
-    snapshot_download('damo-vilab/modelscope-damo-text-to-video-synthesis',
-                      repo_type='model',
-                      local_dir=model_dir)
+# model_dir = pathlib.Path('weights')
+# if not model_dir.exists():
+#     model_dir.mkdir()
+#     snapshot_download('damo-vilab/modelscope-damo-text-to-video-synthesis',
+#                       repo_type='model',
+#                       local_dir=model_dir)
 
 DESCRIPTION = '# [ModelScope 文本生成视频](https://modelscope.cn/models/damo/text-to-video-synthesis/summary)'
 
