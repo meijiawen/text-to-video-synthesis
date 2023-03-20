@@ -10,24 +10,8 @@ import subprocess
 
 import gradio as gr
 import torch
-# from huggingface_hub import snapshot_download
-
-if os.getenv('SYSTEM') == 'spaces':
-    subprocess.run(shlex.split('pip uninstall -y modelscope'))
-    subprocess.run(
-        shlex.split(
-            'pip install git+https://github.com/modelscope/modelscope.git@refs/pull/207/head'
-        ))
-
 from modelscope.outputs import OutputKeys
 from modelscope.pipelines import pipeline
-
-# model_dir = pathlib.Path('weights')
-# if not model_dir.exists():
-#     model_dir.mkdir()
-#     snapshot_download('damo-vilab/modelscope-damo-text-to-video-synthesis',
-#                       repo_type='model',
-#                       local_dir=model_dir)
 
 DESCRIPTION = '# [ModelScope 文本生成视频](https://modelscope.cn/models/damo/text-to-video-synthesis/summary)'
 
@@ -48,7 +32,6 @@ examples = [
 ]
 
 with gr.Blocks(css='style.css') as demo:
-    gr.Markdown(DESCRIPTION)
     with gr.Row():
         with gr.Column():
             prompt = gr.Text(label='Prompt', max_lines=1)
