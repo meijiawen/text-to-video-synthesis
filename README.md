@@ -15,7 +15,7 @@ deployspec:
   cpu: 4
   memory: 32000
   entry_file: app.py
-  gpu: 0
+  gpu: 1
   gpu_memory: 32
   instance: 1
 license: Apache License 2.0
