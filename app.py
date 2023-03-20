@@ -31,7 +31,7 @@ from modelscope.pipelines import pipeline
 
 DESCRIPTION = '# [ModelScope 文本生成视频](https://modelscope.cn/models/damo/text-to-video-synthesis/summary)'
 
-pipe = pipeline('text-to-video-synthesis', model_dir.as_posix())
+pipe = p = pipeline('text-to-video-synthesis', 'damo/text-to-video-synthesis')
 
 
 def generate(prompt: str, seed: int) -> str:
